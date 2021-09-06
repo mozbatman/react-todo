@@ -1,0 +1,19 @@
+.todo {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  background-color: #DADAD9;
+}
+.todo-container {
+  width: 90%;
+  height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}

@@ -1,0 +1,12 @@
+.todo-card {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  min-height: 30px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid grey;
+}
+
+.icon {
+  margin-right: 10px;
+}

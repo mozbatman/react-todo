@@ -1,0 +1,38 @@
+.todo-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  width: 80%;
+  background: #fff;
+  color: black;
+  font: inherit;
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.3);
+  border: 0;
+  outline: 0;
+  padding: 12px 8px;
+}
+
+.button {
+  padding: 11px 16px;
+  margin-left: 20px;
+  cursor: pointer;
+  border-width: 1px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  background: #3e64ff;
+  border-color: #3e64ff;
+  color: #fff;
+}

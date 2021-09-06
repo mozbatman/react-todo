@@ -12,6 +12,7 @@ const createFakeTasks = () => {
 
 test('renders tasks', () => {
   const fakeTasks = createFakeTasks();
+  
   render(<TodoList todoList={fakeTasks}/>)
 
   const tasks = screen.getAllByTestId('task-card').map(tc => tc.textContent);

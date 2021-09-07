@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import TodoInput from '../../components/todoInput/todoInput';
 import TodoList from '../../components/todoList/todoList';
+
 import axios from 'axios';
 import './index.css';
 
-let endpoint = "http://localhost:8080";
+const BASE_URL = process.env.API_URL;
 
 export default function TodoContainer () {
   const [todoList, settodoList] = useState([]);
@@ -15,11 +16,11 @@ export default function TodoContainer () {
   }, [fetch])
 
   const fetchData = () => {
-    axios.get(endpoint + "/task").then(res => settodoList(res.data));
+    axios.get(BASE_URL + "/task").then(res => settodoList(res.data));
   }
 
   const postTodo = (postData) => {
-    axios.post(endpoint + "/task", postData,{headers: {
+    axios.post(BASE_URL + "/task", postData,{headers: {
       "Content-Type": "application/x-www-form-urlencoded",
     }})
     .then(res => settodoList([...todoList, res.data]));  

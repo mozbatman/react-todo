@@ -5,9 +5,10 @@ import TodoList from '../../components/todoList/todoList';
 import axios from 'axios';
 import './index.css';
 
-const BASE_URL = process.env.API_URL;
+const BASE_URL = process.env.REACT_APP_API_URL;
 
 export default function TodoContainer () {
+  console.log(`BASE_URL`, BASE_URL)
   const [todoList, settodoList] = useState([]);
   const [fetch, setFetch] = useState(null);
 

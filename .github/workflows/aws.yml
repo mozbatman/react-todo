@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: test
-        uses: yarn test
+        uses: npm run test -a
   deploy:
     name: Deploy
     runs-on: ubuntu-latest

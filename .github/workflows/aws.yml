@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: test
-        uses: yarn run test
+        uses: yarn test
   deploy:
     name: Deploy
     runs-on: ubuntu-latest

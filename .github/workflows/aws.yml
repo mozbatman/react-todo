@@ -16,7 +16,3 @@ jobs:
           heroku_app_name: "react-todo-appm" #Must be unique in Heroku
           heroku_email: "mustafaozbatman6@gmail.com"
           usedocker: true
-          docker_build_args: |
-            REACT_APP_API_URL
-        env:
-          REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}

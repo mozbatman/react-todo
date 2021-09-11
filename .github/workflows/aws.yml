@@ -13,7 +13,7 @@ on:
   pull_request:
     branches: [ main ]
 
-name: Node Project `my-app` CI on ECR
+name: React Project `react-todo-app` CI on ECR
 
 jobs:
   deploy:
@@ -39,7 +39,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: my-app-repo
+        ECR_REPOSITORY: react-todo-app
         IMAGE_TAG: latest
       run: |
         # Build a docker container and push it to ECR 

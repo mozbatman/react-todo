@@ -6,16 +6,6 @@ on:
       - main
 
 jobs:
-  create-envfile:
- 
-    runs-on: ubuntu-18.04
- 
-    steps:
-    - name: Make envfile
-      uses: SpicyPizza/create-envfile@v1
-      with:
-        envkey_REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
-        file_name: .env
   test:
     runs-on: ubuntu-latest
     steps:

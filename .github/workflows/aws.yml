@@ -9,14 +9,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-      - uses: actions/checkout@v2
-      - name: Set up node 
-        uses: actions/setup-node@v1
-      - name: Install dependencies
-        run: npm install
-      - name: Run tests 
-        run: npm test a
+    - uses: actions/checkout@v2
+    - name: Install modules
+      run: yarn
+    - name: Run tests
+      run: yarn test
   build:
     runs-on: ubuntu-latest
     steps:

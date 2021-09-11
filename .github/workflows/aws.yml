@@ -15,22 +15,29 @@ jobs:
       uses: SpicyPizza/create-envfile@v1
       with:
         envkey_REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+        file_name: .env
   test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install modules
-      run: yarn
     - name: Make envfile
       uses: SpicyPizza/create-envfile@v1
       with:
         envkey_REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+        file_name: .env
+    - name: Install modules
+      run: yarn
     - name: Run tests
       run: yarn test
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          envkey_REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+          file_name: .env
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}

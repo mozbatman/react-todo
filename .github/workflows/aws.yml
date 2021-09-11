@@ -16,6 +16,13 @@ on:
 name: React Project `react-todo-app` CI on ECR
 
 jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: test
+        uses: yarn run test
   deploy:
     name: Deploy
     runs-on: ubuntu-latest

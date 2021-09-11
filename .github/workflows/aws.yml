@@ -17,7 +17,6 @@ jobs:
           heroku_email: "mustafaozbatman6@gmail.com"
           usedocker: true
           docker_build_args: |
-            NODE_ENV
-            SECRET_KEY
+            REACT_APP_API_URL
         env:
           REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}

@@ -8,9 +8,7 @@ An application that the user can annotate and list, built with React, JavaScript
 
 #### Example:   
 
-[ PRETEND SCREEN SHOT IS HERE ]
-
-[ PRETEND OTHER SCREEN SHOT IS HERE ]
+![image](https://user-images.githubusercontent.com/49883994/132981933-f38049a4-d6a0-4b9f-8e1b-057529cd1ec2.png)
 
 ## Installation and Setup Instructions
 

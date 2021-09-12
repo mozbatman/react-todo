@@ -8,16 +8,18 @@ import './index.css';
 const BASE_URL = process.env.REACT_APP_API_URL;
 
 export default function TodoContainer () {
-  console.log(`BASE_URL`, BASE_URL)
   const [todoList, settodoList] = useState([]);
-  const [fetch, setFetch] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    fetchData()
-  }, [fetch])
+    fetchData();
+  }, [])
 
   const fetchData = () => {
-    axios.get(BASE_URL + "/task").then(res => settodoList(res.data));
+    axios.get(BASE_URL + "/task")
+      .then(res => {settodoList(res.data); setIsLoading(false)})
+      .catch(err => {setIsError(true)});
   }
 
   const postTodo = (postData) => {
@@ -35,7 +37,7 @@ export default function TodoContainer () {
         <TodoInput postTodo={postTodo}/>
         {
           todoList.length > 0 
-          ? <TodoList todoList={todoList}/>
+          ? <TodoList todoList={todoList} isLoading={isLoading} isError={isError} />
           : null
         }
       </div>

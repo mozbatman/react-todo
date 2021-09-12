@@ -17,6 +17,8 @@ jobs:
         file_name: .env
     - name: Install modules
       run: yarn
+    - name: running project for e2e test
+      run: yarn start
     - name: Run tests
       run: yarn test
   build:

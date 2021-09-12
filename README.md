@@ -35,6 +35,10 @@ To Visit App:
 
 `localhost:3000`  
 
+## Deployment
+ - Pipeline written on heroku using github action.
+ - .github/workflows
+
 ## Reflection
 
   - Todo is an app created to record.

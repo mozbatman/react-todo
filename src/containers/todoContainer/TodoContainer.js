@@ -35,11 +35,7 @@ export default function TodoContainer () {
       <div className="todo-container">
         <h1>Todo App</h1>
         <TodoInput postTodo={postTodo}/>
-        {
-          todoList.length > 0 
-          ? <TodoList todoList={todoList} isLoading={isLoading} isError={isError} />
-          : null
-        }
+        <TodoList todoList={todoList} isLoading={isLoading} isError={isError} />
       </div>
     </div>
   )

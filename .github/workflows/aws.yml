@@ -18,7 +18,10 @@ jobs:
     - name: Install modules
       run: yarn
     - name: Run tests
-      run: yarn test
+      run: |
+        yarn start
+        yarn test
+        pkill node
   build:
     runs-on: ubuntu-latest
     steps:

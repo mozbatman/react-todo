@@ -19,8 +19,13 @@ jobs:
       run: yarn
     - name: Run tests
       run: |
-        yarn start
-        yarn test
+        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+        sh -c 'echo deb http://dl.google.com/linux/chrome/deb/ stable main > /etc/apt/sources.list.d/google.list'
+        apt-get update
+        apt-get install -y xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic xvfb x11-apps imagemagick google-chrome-stable
+
+
+        npm run test:e2e:chrome
         pkill node
   build:
     runs-on: ubuntu-latest
